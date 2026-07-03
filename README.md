@@ -10,6 +10,8 @@ Before downloading the file please ensure that you run this in Windows 64bit OS 
 Feel free to have a look at our web: https://mediaengineofficial.blogspot.com
 
 ### Disclaimer
-MediaEngine is an independent, open-source software project and is not affiliated with, authorized, or endorsed by any other brand.
+MediaEngine is an independent, open-source software project and is not affiliated with, authorized, or endorsed by any other any other brand.
 
-<img src="https://github.com/user-attachments/assets/0a9a2108-911d-4ea5-bc92-1af86e6e025b" alt="MediaEngine GUI Showcase" width="100%" />
+<img width="100%" alt="Media Engine Dashboard" src="https://github.com/user-attachments/assets/e94e4738-d655-4b62-be2e-1d297accd62e" />
+
+

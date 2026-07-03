@@ -14,6 +14,6 @@ Feel free to have a look at our web: https://localmediaengineofficial.blogspot.c
 ### Disclaimer
 MediaEngine is an independent, open-source software project and is not affiliated with, authorized, or endorsed by any other any other brand.
 
-<img width="100%" alt="Media Engine Dashboard" src="https://github.com/user-attachments/assets/e94e4738-d655-4b62-be2e-1d297accd62e" />
+<img width="100%" alt="Media Engine Dashboard" src="https://github.com/user-attachments/assets/1542d537-1537-48ac-98ba-e718c4df2518" />
 
 

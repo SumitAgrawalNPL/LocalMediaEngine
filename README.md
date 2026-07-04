@@ -32,22 +32,54 @@ A powerful, lightweight desktop application for media file conversion, codec pro
 
 ## 📚 How to Use
 
+Below are step-by-step instructions with screenshots to help you use LocalMediaEngine.
+
 ### Converting Media Files
-1. Launch the application
-2. Click "Select File" and choose your media file
-3. Select the desired output format
-4. Click "Convert" and wait for completion
+
+1. Launch the application.
+2. Click the "Select File" button and choose one or more media files from your computer.
+3. Under "Output Format", pick the desired format (for example: MP4, MKV, MP3, WAV).
+4. (Optional) Open "Advanced Options" to tweak bitrate, resolution, or codec settings.
+5. Click the **Convert** button and wait for the progress bar to complete.
+6. Find the converted file in the output folder or click "Open Folder" when conversion finishes.
+
+<img width="100%" alt="Convert - Select File and Output" src="https://github.com/user-attachments/assets/67fb297b-8e4b-40fc-9cec-2301ddd4a631" />
+
+Tips:
+- For best audio quality when exporting MP3, choose a higher bitrate (192–320 kbps).
+- Lossless formats (like FLAC) preserve original audio quality but produce larger files.
+
+---
 
 ### Downloading YouTube Videos
-1. Paste the YouTube URL
-2. Select output format (MP3 or MP4)
-3. Click "Download"
-4. Save to your desired location
+
+1. Copy the YouTube video URL from your browser.
+2. Paste the URL into the "YouTube URL" field in the app.
+3. Choose the output format: **MP4** to save video, **MP3** to extract audio.
+4. Click **Download** and wait for the download and conversion to complete.
+5. Save the file to your desired location or use "Open Folder" to access it instantly.
+
+<img width="100%" alt="YouTube Download - Paste URL and Download" src="https://github.com/user-attachments/assets/d99a0633-1baa-4f21-b884-e9126cf39592" />
+
+Notes:
+- Ensure you have the right to download the content. Respect copyright and the platform's terms of service.
+- If a download fails, check your internet connection and try again.
+
+---
 
 ### Changing Codecs
-1. Load your media file
-2. Choose your target codec
-3. Apply settings and convert
+
+1. Load your media file via "Select File".
+2. Under "Codec Settings", choose the target audio or video codec (e.g., H.264, H.265, AAC, MP3).
+3. Adjust codec-specific options (profile, level, bitrate) if needed.
+4. Click **Apply** or **Convert** to start processing the file with the new codec.
+
+<img width="100%" alt="Codec Settings - Change Codec and Convert" src="https://github.com/user-attachments/assets/49271585-4eea-473f-b20e-3a2b577617dd" />
+
+Pro tip:
+- Converting between lossy codecs (e.g., MP3 -> AAC) may reduce quality; use a higher bitrate to minimize loss.
+
+---
 
 ## 📦 Project Details
 
@@ -68,7 +100,7 @@ Copyright © 2026 Sumit Agrawal
 
 ## ⚠️ Disclaimer
 
-LocalMediaEngine is an independent, open-source software project and is not affiliated with, authorized, or endorsed by YouTube, any media platforms, or any other brands. Users are responsible for ensuring they have the legal right to download and convert content using this application.
+LocalMediaEngine is an independent, open-source software project and is not affiliated with, authorized, or endorsed by YouTube, any media platforms, or any other brands. Users are responsible for[...]
 
 ## 🎨 Dashboard Preview
 

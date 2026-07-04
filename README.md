@@ -72,7 +72,10 @@ LocalMediaEngine is an independent, open-source software project and is not affi
 
 ## 🎨 Dashboard Preview
 
-<img width="100%" alt="Media Engine Dashboard" src="https://github.com/user-attachments/assets/1542d537-1537-48ac-98ba-e718c4df2518" />
+<img width="100%" alt="LocalMediaHub DashBoard" src="https://github.com/user-attachments/assets/a97566c0-a63c-4d5e-b022-3d7356c2a806" />
+<img width="100%" alt="LocalMediaEngine" src="https://github.com/user-attachments/assets/d2185bf5-331d-4f25-80f3-278c94331fb2" />
+<img width="100%" alt="LocalMediaEngine" src="https://github.com/user-attachments/assets/9511667e-8c28-4938-88fd-e2a05e576b7c" />
+<img width="100%" alt="LocalMediaEngine" src="https://github.com/user-attachments/assets/75071a74-4dfd-4e14-9981-1f56567ac078" />
 
 ---
 

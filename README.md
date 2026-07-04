@@ -84,7 +84,7 @@ Notes:
 ## 🔗 Links & Resources
 
 - **Official Blog**: https://localmediaengineofficial.blogspot.com/
-- **Project Repository**: https://github.com/SumitAgrawalNPL/LocalMediaEngine
+- **[Project Repository]**(https://github.com/SumitAgrawalNPL/LocalMediaEngine)
 
 ## ⚖️ License
 

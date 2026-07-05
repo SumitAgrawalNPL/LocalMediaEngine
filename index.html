@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>LocalMediaEngine | Professional Local Media Toolkit</title>
+
+<meta name="description" content="Convert media, process codecs, download YouTube videos and work completely offline using LocalMediaEngine.">
+
+<meta name="keywords" content="LocalMediaEngine, Media Converter, H264, H265, AV1, YouTube Downloader">
+
+<meta name="theme-color" content="#0d1117">
+
+<link rel="icon" href="favicon.ico">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:Inter,sans-serif;
+background:#0d1117;
+color:#e6edf3;
+
+}
+
+a{
+
+text-decoration:none;
+
+}
+
+nav{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+backdrop-filter:blur(18px);
+background:rgba(13,17,23,.75);
+padding:18px 9%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+
+}
+
+.logo{
+
+font-size:28px;
+font-weight:800;
+color:#58a6ff;
+
+}
+
+nav ul{
+
+display:flex;
+gap:35px;
+list-style:none;
+
+}
+
+nav a{
+
+color:#d0d7de;
+font-weight:500;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#58a6ff;
+
+}
+
+.hero{
+
+padding:170px 9% 120px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+align-items:center;
+
+}
+
+.hero h1{
+
+font-size:64px;
+font-weight:800;
+line-height:1.1;
+
+}
+
+.hero h1 span{
+
+color:#58a6ff;
+
+}
+
+.hero p{
+
+margin:30px 0;
+font-size:19px;
+line-height:1.8;
+color:#9da7b3;
+
+}
+
+.buttons{
+
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:17px 34px;
+border-radius:12px;
+font-weight:700;
+transition:.3s;
+
+}
+
+.download{
+
+background:#238636;
+color:white;
+
+}
+
+.download:hover{
+
+transform:translateY(-4px);
+
+}
+
+.github{
+
+border:2px solid #30363d;
+color:white;
+
+}
+
+.github:hover{
+
+background:#21262d;
+
+}
+
+.hero img{
+
+width:100%;
+border-radius:20px;
+box-shadow:0 40px 90px rgba(0,0,0,.45);
+
+}
+
+.stats{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+padding:70px 9%;
+
+}
+
+.stat{
+
+background:#161b22;
+padding:35px;
+text-align:center;
+border-radius:16px;
+
+}
+
+.stat h2{
+
+font-size:42px;
+color:#58a6ff;
+
+}
+
+.stat p{
+
+margin-top:8px;
+color:#8b949e;
+
+}
+
+section{
+
+padding:90px 9%;
+
+}
+
+.title{
+
+font-size:42px;
+margin-bottom:18px;
+
+}
+
+.subtitle{
+
+color:#8b949e;
+margin-bottom:60px;
+max-width:760px;
+
+}
+
+.features{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+gap:28px;
+
+}
+
+.feature{
+
+background:#161b22;
+padding:35px;
+border-radius:18px;
+transition:.35s;
+
+}
+
+.feature:hover{
+
+transform:translateY(-8px);
+
+}
+
+.feature h3{
+
+margin:20px 0;
+font-size:23px;
+
+}
+
+.feature p{
+
+color:#8b949e;
+line-height:1.8;
+
+}
+
+.download-boxes{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:35px;
+
+}
+
+.box{
+
+background:#161b22;
+padding:45px;
+border-radius:20px;
+
+}
+
+.box h2{
+
+font-size:34px;
+
+}
+
+.version{
+
+display:inline-block;
+margin:18px 0;
+padding:8px 18px;
+background:#238636;
+border-radius:30px;
+
+}
+
+.box ul{
+
+margin:25px 0 35px 20px;
+line-height:2;
+
+}
+
+.box a{
+
+display:inline-block;
+padding:18px 35px;
+background:#238636;
+color:white;
+font-weight:700;
+border-radius:12px;
+
+}
+
+.gallery{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+gap:30px;
+
+}
+
+.gallery img{
+
+width:100%;
+border-radius:18px;
+transition:.4s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.02);
+
+}
+
+.timeline{
+
+border-left:3px solid #58a6ff;
+padding-left:30px;
+
+}
+
+.step{
+
+margin-bottom:45px;
+
+}
+
+.step h3{
+
+margin-bottom:10px;
+
+}
+
+.step p{
+
+color:#8b949e;
+
+}
+
+.requirements{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+
+}
+
+.req{
+
+background:#161b22;
+padding:30px;
+border-radius:15px;
+
+}
+
+.req h3{
+
+margin-bottom:12px;
+
+}
+
+.req p{
+
+color:#8b949e;
+
+}
+
+@media(max-width:950px){
+
+.hero{
+
+grid-template-columns:1fr;
+
+}
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">🎬 LocalMediaEngine</div>
+
+<ul>
+
+<li><a href="#features">Features</a></li>
+
+<li><a href="#download">Download</a></li>
+
+<li><a href="#screenshots">Screenshots</a></li>
+
+<li><a href="#guide">Guide</a></li>
+
+<li><a href="https://localmediaengineofficial.blogspot.com/">Blog</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div>
+
+<h1>Powerful <span>Local</span><br>Media Processing<br>Made Simple.</h1>
+
+<p>
+
+Convert media, process codecs, download YouTube videos, extract audio and work completely offline using a modern Windows application.
+
+</p>
+
+<div class="buttons">
+
+<a class="btn download" href="https://github.com/SumitAgrawalNPL/LocalMediaEngine/releases/download/V2.0.0/LocalMediaEngine.exe">
+
+⬇ Download LocalMediaEngine
+
+</a>
+
+<a class="btn github" href="https://github.com/SumitAgrawalNPL/LocalMediaEngine">
+
+GitHub Repository
+
+</a>
+
+</div>
+
+</div>
+
+<div>
+
+<img src="https://github.com/user-attachments/assets/68ceaf2c-71db-4c40-a4a2-ecdddd88056b">
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat">
+
+<h2>100%</h2>
+
+<p>Offline Processing</p>
+
+</div>
+
+<div class="stat">
+
+<h2>170MB</h2>
+
+<p>Application Size</p>
+
+</div>
+
+<div class="stat">
+
+<h2>64-bit</h2>
+
+<p>Windows Support</p>
+
+</div>
+
+<div class="stat">
+
+<h2>MIT</h2>
+
+<p>Open Source</p>
+
+</div>
+
+</section>
+
+<section id="features">
+
+<h1 class="title">
+
+Everything You Need
+
+</h1>
+
+<p class="subtitle">
+
+Designed for creators, editors and everyday users who need reliable multimedia tools without depending on online services.
+
+</p>
+
+<div class="features">
+
+<div class="feature">
+
+<h3>🎞 Media Conversion</h3>
+
+<p>
+
+Convert videos, audio and documents into multiple supported formats.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>⚡ Codec Processing</h3>
+
+<p>
+
+Convert between H.264, H.265, AV1 and Apple ProRes.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>📥 YouTube Downloads</h3>
+
+<p>
+
+Download supported YouTube videos directly as MP4 or MP3.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>🔒 Local Processing</h3>
+
+<p>
+
+Everything happens on your computer without uploading personal media files.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>🎵 Audio Extraction</h3>
+
+<p>
+
+Extract audio or video streams with only a few clicks.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>🖥 Modern Interface</h3>
+
+<p>
+
+Simple dashboard designed for beginners and advanced users alike.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="download">
+
+<h1 class="title">
+
+Downloads
+
+</h1>
+
+<div class="download-boxes">
+
+<div class="box">
+
+<h2>LocalMediaEngine</h2>
+
+<div class="version">
+
+V2.0.0 Stable
+
+</div>
+
+<ul>
+
+<li>Latest Stable Release</li>
+
+<li>Windows 64-bit</li>
+
+<li>170MB Download</li>
+
+<li>Offline Processing</li>
+
+</ul>
+
+<a href="https://github.com/SumitAgrawalNPL/LocalMediaEngine/releases/download/V2.0.0/LocalMediaEngine.exe">
+
+Download
+
+</a>
+
+</div>
+
+<div class="box">
+
+<h2>MediaEngine</h2>
+
+<div class="version">
+
+V1.0.0
+
+</div>
+
+<ul>
+
+<li>Legacy Release</li>
+
+<li>Windows</li>
+
+<li>Media Utilities</li>
+
+<li>Open Source</li>
+
+</ul>
+
+<a href="https://github.com/SumitAgrawalNPL/MediaEngine/releases/download/v1.0.0/MediaEngine.exe">
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="screenshots">
+
+<h1 class="title">
+
+Application Preview
+
+</h1>
+
+<div class="gallery">
+
+<img src="https://github.com/user-attachments/assets/68ceaf2c-71db-4c40-a4a2-ecdddd88056b">
+
+<img src="https://github.com/user-attachments/assets/67fb297b-8e4b-40fc-9cec-2301ddd4a631">
+
+<img src="https://github.com/user-attachments/assets/d99a0633-1baa-4f21-b884-e9126cf39592">
+
+<img src="https://github.com/user-attachments/assets/49271585-4eea-473f-b20e-3a2b577617dd">
+
+</div>
+
+</section>
+<section id="guide">
+
+<h1 class="title">
+
+Getting Started
+
+</h1>
+
+<p class="subtitle">
+
+Follow these simple steps to begin using LocalMediaEngine efficiently.
+
+</p>
+
+<div class="timeline">
+
+<div class="step">
+
+<h3>① Download</h3>
+
+<p>
+
+Download the latest stable executable from the GitHub Releases page.
+
+</p>
+
+</div>
+
+<div class="step">
+
+<h3>② Launch</h3>
+
+<p>
+
+Run the application on Windows 10 or Windows 11 (64-bit).
+
+</p>
+
+</div>
+
+<div class="step">
+
+<h3>③ Select Output Folder</h3>
+
+<p>
+
+Choose where converted media files should be stored before starting any operation.
+
+</p>
+
+</div>
+
+<div class="step">
+
+<h3>④ Choose Your Tool</h3>
+
+<p>
+
+Select Media Conversion, Codec Processing, Audio Extraction, Video Extraction or YouTube Downloader.
+
+</p>
+
+</div>
+
+<div class="step">
+
+<h3>⑤ Start Processing</h3>
+
+<p>
+
+Upload your media file or paste a YouTube link and click Start Processing.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="requirements">
+
+<h1 class="title">
+
+System Requirements
+
+</h1>
+
+<p class="subtitle">
+
+LocalMediaEngine is designed for modern Windows systems.
+
+</p>
+
+<div class="requirements">
+
+<div class="req">
+
+<h3>Operating System</h3>
+
+<p>
+
+Windows 10 or Windows 11 (64-bit)
+
+</p>
+
+</div>
+
+<div class="req">
+
+<h3>Architecture</h3>
+
+<p>
+
+64-bit processor required.
+
+</p>
+
+</div>
+
+<div class="req">
+
+<h3>Storage</h3>
+
+<p>
+
+Approximately 170MB installation space plus additional storage for media files.
+
+</p>
+
+</div>
+
+<div class="req">
+
+<h3>Internet</h3>
+
+<p>
+
+Only required when downloading YouTube videos or checking for updates.
+
+</p>
+
+</div>
+
+<div class="req">
+
+<h3>Privacy</h3>
+
+<p>
+
+Media files remain on your own computer throughout processing.
+
+</p>
+
+</div>
+
+<div class="req">
+
+<h3>License</h3>
+
+<p>
+
+Released under the MIT License.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="workflow">
+
+<h1 class="title">
+
+Available Tools
+
+</h1>
+
+<p class="subtitle">
+
+Everything is accessible through one simple dashboard.
+
+</p>
+
+<div class="features">
+
+<div class="feature">
+
+<h3>📁 Media Conversion</h3>
+
+<p>
+
+Convert files between supported formats while maintaining quality whenever possible.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>🎬 Codec Conversion</h3>
+
+<p>
+
+Convert videos using H.264, H.265, AV1 or Apple ProRes.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>🎵 Extract Audio</h3>
+
+<p>
+
+Save only the audio stream from compatible media files.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>🎥 Extract Video</h3>
+
+<p>
+
+Remove audio tracks and export video-only files.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>📺 YouTube Downloader</h3>
+
+<p>
+
+Download supported YouTube videos directly as MP4 or MP3.
+
+Always ensure you have permission to download the content.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>⚡ Offline Performance</h3>
+
+<p>
+
+Most processing tasks are completed locally without uploading your media.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="project">
+
+<h1 class="title">
+
+Project Information
+
+</h1>
+
+<p class="subtitle">
+
+An open-source desktop application focused on local multimedia processing.
+
+</p>
+
+<div class="download-boxes">
+
+<div class="box">
+
+<h2>Project Details</h2>
+
+<ul>
+
+<li>Language : Python</li>
+
+<li>Application : Desktop Software</li>
+
+<li>License : MIT</li>
+
+<li>Platform : Windows 64-bit</li>
+
+<li>Interface : Graphical User Interface</li>
+
+<li>Distribution : GitHub Releases</li>
+
+</ul>
+
+</div>
+
+<div class="box">
+
+<h2>Useful Links</h2>
+
+<ul>
+
+<li><a href="https://github.com/SumitAgrawalNPL/LocalMediaEngine">GitHub Repository</a></li>
+
+<li><a href="https://github.com/SumitAgrawalNPL/LocalMediaEngine/releases">Latest Releases</a></li>
+
+<li><a href="https://localmediaengineofficial.blogspot.com/">Official Blog</a></li>
+
+<li><a href="https://github.com/SumitAgrawalNPL/MediaEngine">MediaEngine Project</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="faq">
+
+<h1 class="title">
+
+Frequently Asked Questions
+
+</h1>
+
+<p class="subtitle">
+
+Common questions from new users.
+
+</p>
+
+<div class="features">
+
+<div class="feature">
+
+<h3>Does LocalMediaEngine upload my files?</h3>
+
+<p>
+
+No. Media processing is designed to take place on your own computer for supported operations.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>Which operating system is supported?</h3>
+
+<p>
+
+Windows 10 and Windows 11 (64-bit).
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>Can I download YouTube videos?</h3>
+
+<p>
+
+Yes, where supported. Always ensure your use complies with applicable laws and the platform's terms.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>Is LocalMediaEngine free?</h3>
+
+<p>
+
+Yes. The project is released under the MIT License.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>Is internet required?</h3>
+
+<p>
+
+Only for downloading online content. Local media conversion works offline.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>Where can I report bugs?</h3>
+
+<p>
+
+Please use the GitHub repository Issues section to report bugs or request features.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<section id="changelog">
+
+<h1 class="title">
+
+Latest Release
+
+</h1>
+
+<p class="subtitle">
+
+Recent improvements and development progress.
+
+</p>
+
+<div class="download-boxes">
+
+<div class="box">
+
+<h2>LocalMediaEngine V2.0.0 Stable</h2>
+
+<ul>
+
+<li>Improved application stability.</li>
+
+<li>Enhanced media processing workflow.</li>
+
+<li>Performance optimizations.</li>
+
+<li>Cleaner interface.</li>
+
+<li>Bug fixes and internal improvements.</li>
+
+</ul>
+
+</div>
+
+<div class="box">
+
+<h2>Coming Soon</h2>
+
+<ul>
+
+<li>More supported formats.</li>
+
+<li>Additional codec presets.</li>
+
+<li>Expanded processing options.</li>
+
+<li>Performance improvements.</li>
+
+<li>Quality-of-life updates.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h1 class="title">
+
+Support Development
+
+</h1>
+
+<p class="subtitle">
+
+If you find LocalMediaEngine useful, consider starring the GitHub repository. Your support helps improve the project and makes future updates possible.
+
+</p>
+
+<div class="buttons">
+
+<a class="btn github"
+
+href="https://github.com/SumitAgrawalNPL/LocalMediaEngine">
+
+⭐ Star on GitHub
+
+</a>
+
+<a class="btn download"
+
+href="https://github.com/SumitAgrawalNPL/LocalMediaEngine/releases">
+
+📦 Latest Release
+
+</a>
+
+<a class="btn github"
+
+href="https://localmediaengineofficial.blogspot.com/">
+
+📰 Official Blog
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<div style="max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;">
+
+<div>
+
+<h2 style="margin-bottom:20px;color:#58a6ff;">
+
+🎬 LocalMediaEngine
+
+</h2>
+
+<p style="color:#8b949e;line-height:1.8;">
+
+A lightweight open-source Windows application for local media conversion, codec processing and supported online media downloading.
+
+</p>
+
+</div>
+
+<div>
+
+<h3 style="margin-bottom:20px;">
+
+Navigation
+
+</h3>
+
+<p><a href="#features">Features</a></p>
+
+<p><a href="#download">Downloads</a></p>
+
+<p><a href="#screenshots">Screenshots</a></p>
+
+<p><a href="#guide">Guide</a></p>
+
+<p><a href="#faq">FAQ</a></p>
+
+</div>
+
+<div>
+
+<h3 style="margin-bottom:20px;">
+
+Resources
+
+</h3>
+
+<p>
+
+<a href="https://github.com/SumitAgrawalNPL/LocalMediaEngine">
+
+GitHub Repository
+
+</a>
+
+</p>
+
+<p>
+
+<a href="https://github.com/SumitAgrawalNPL/LocalMediaEngine/releases">
+
+Releases
+
+</a>
+
+</p>
+
+<p>
+
+<a href="https://localmediaengineofficial.blogspot.com/">
+
+Official Blog
+
+</a>
+
+</p>
+
+</div>
+
+<div>
+
+<h3 style="margin-bottom:20px;">
+
+License
+
+</h3>
+
+<p style="color:#8b949e;line-height:1.8;">
+
+Released under the MIT License.
+
+See the LICENSE file in the repository for complete licensing information.
+
+</p>
+
+</div>
+
+</div>
+
+<hr style="margin:60px 0;border:0;border-top:1px solid #30363d;">
+
+<p style="text-align:center;color:#8b949e;line-height:1.8;">
+
+Copyright © 2026 Sumit Agrawal
+
+<br><br>
+
+LocalMediaEngine is an independent open-source project and is not affiliated with, endorsed by or associated with YouTube or any other third-party platform.
+
+</p>
+
+</footer>
+
+<button id="topBtn">
+
+↑
+
+</button>
+
+<style>
+
+footer{
+
+padding:90px 9%;
+
+background:#090c10;
+
+}
+
+footer a{
+
+color:#8b949e;
+
+transition:.3s;
+
+}
+
+footer a:hover{
+
+color:#58a6ff;
+
+}
+
+#topBtn{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#238636;
+
+color:white;
+
+font-size:22px;
+
+cursor:pointer;
+
+display:none;
+
+box-shadow:0 10px 30px rgba(0,0,0,.45);
+
+transition:.3s;
+
+}
+
+#topBtn:hover{
+
+transform:translateY(-5px);
+
+}
+
+.fade{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:1s;
+
+}
+
+.fade.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+</style>
+
+<script>
+
+const btn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+btn.style.display=
+
+document.documentElement.scrollTop>500
+
+?
+
+"block"
+
+:
+
+"none";
+
+};
+
+btn.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+document.querySelectorAll("section,.feature,.box,.stat").forEach(el=>{
+
+el.classList.add("fade");
+
+observer.observe(el);
+
+});
+
+</script>
+
+</body>
+
+</html>
